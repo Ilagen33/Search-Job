@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*Reset*/
+
+* {
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Applico a tutta la pagina una background-image e il font-family Montserrat*/
+
+body {
+   background-image: url(https://www.clickable.it/wp-content/uploads/2020/09/come-scrivere-home-page.png);
+   font-family: "Montserrat", sans-serif;
+}
+
+/*Container messo in relative per poter mettere in absolute alcuni elementi all'interno*/
+.container {
+   position: relative;
+   min-height: 100vh;
+}
+
+/*header*/
+header {
+   padding: 0 10px;
+   margin:0;
+
+   z-index: 2;
+   position: sticky;
+   top: 0;
+   
+   box-shadow:0px 20px 20px 0px #a2d6d9de;
+   color: white;   
+   background: linear-gradient(360deg, #a2d6d9e0, #0a3c5e);
+
+}
+
+/*Nav-bar*/
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+
+   padding: 10px 0;
+}
+
+/*search-bar*/
+.search {
+   padding: 10px 5px;
+   border: 2px solid white;
+   border-radius: 30px;
+}
+
+.search i {
+   cursor: pointer;
+}
+
+.search input {
+   margin:0;
+   padding:0;
+   border: none;
+   background-color: transparent ;
+}
+
+.search input::placeholder {
+   color: white;
+}
+
+/*menu che contiene le icone con si aprono i menu a tendina*/
+.menu {
+   padding: 10px;
+   height: 50px;
+   margin-right: 65px;
+
+   border: 2px solid white;
+   border-radius: 30px;
+
+   transition: 0.5s ease-in-out;
+
+
+}
+
+.menu:hover {
+   cursor: pointer;
+   box-shadow: 6px 5px 5px 0 #ffffffc9;
+   transform: translateY(-5px) translateX(-5px);
+}
+
+.menu i:hover {
+   border-bottom:2px solid white;
+}
+
+/*tutti i menu a tendina*/
+.tendina {
+   background-color: white;
+   color: #f7a60f;
+
+   border-radius: 10px;
+   border: 3px solid #f7a60f;
+
+   position: absolute;
+
+   opacity: 0;
+   transition: 0.3s ease-in-out;
+}
+
+/*tendina dell'icona account*/
+.tendina-account {
+   width: 90px;
+   height: 60px;
+
+   top: 70px;
+   right: 0px;
+}
+
+/*tendina dell'icona tre barre*/
+.tendina-menu {
+   width: 92px;
+   height: 60px;
+
+   top: 70px;
+   right: 88px;
+}
+
+/*tendina dei piaciuti*/
+.tendina-piaciuti {
+   width: 85px;
+   height: 60px;
+
+   top: 70px;
+   right: 178px;
+}
+
+/*elementi dei menu a tendina*/
+.settings, .log-out, .dashboard, .msn, .salvati, .piaciuti {
+   display: flex;
+   align-items: center;
+}
+
+.settings:hover, .log-out:hover, .dashboard:hover, .msn:hover, .salvati:hover, .piaciuti:hover {
+   background-color: rgb(0 0 0 / 5%);
+   border-radius: 7px;
+}
+
+/*paragrafi dei menu a tendina*/
+.settings p, .log-out p, .dashboard p, .msn p, .salvati p, .piaciuti p {
+   cursor: pointer;
+   font-size: 10px;
+}
+
+i {
+   padding: 5px 10px;
+   cursor: pointer;
+}
+
+.nascondi {
+   opacity:1;
+}
+
+#main-content {
+   padding-bottom: 6.5rem;
+}
+
+h1 {
+   margin:10px;
+   padding:0 0 5px 20px;
+   border-bottom: 5px solid #f7a60f ;
+}
+
+form {
+   text-align: center;
+   margin-top: 30px;
+}
+
+form h2 {
+   margin: 10px;
+}
+
+label {
+   font-weight: 600;
+   color:#f7a60f
+}
+
+input {
+   margin: 10px 3px;
+   padding: 7px 5px;
+
+   border-radius: 20px;
+   border: 1px solid grey;
+
+   text-align: center;
+}
+
+#risultati-lista {
+   margin: 0;
+}
+
+#professione {
+   margin-right: 30px;
+}
+
+#ricerca {
+   background-color: #f7a60f;
+   color: black;
+
+   padding: 10px;
+   margin-left: 30px;
+
+   text-align: center;
+
+   border-radius: 20px;
+   border: 1px solid grey;
+}
+
+#ricerca:hover {
+   cursor: pointer;
+}
+
+footer {
+   height: 6.5rem;
+   width: 100%;
+   padding: 0 10px;
+
+   position:absolute;
+   bottom:0;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   background-color: black;
+   color: white;
+}
+
+h3 {
+   padding: 10px 5px;
+   margin: 10px;
+   
+   border: 2px solid white;
+   border-radius: 30px;
+
+   transition: 1s ease;
+   
+}
+
+ nav h3:hover {
+   cursor: pointer;
+   box-shadow: 6px 5px 5px 0 #ffffffc9;
+   transform: translateY(-5px) translateX(-5px);
+}
+
+ul {
+   margin:10px;
+}
+
+ul h4 {
+   margin-bottom: 10px;
+}
+
+li {
+   padding-bottom: 5px;
+   list-style: none;
+   border-bottom: 0.5px solid white;
+   font-size: 12px;
+   z-index: 1;
+}
+
+footer div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+footer label {
+   font-size: 10px;
+}
+
+footer input{
+   background-color: white;
+   margin:10px;
+}
+
+footer input::placeholder {
+   color: black;
+}
+
+input::placeholder {
+   font-family: "Roboto Condensed", sans-serif;
+}
+ 
+#risultati-lista .Counter, #risultati-lista .error {
+   backdrop-filter: blur(30px);
+   background-color: transparent;
+
+   text-align: start;
+   list-style: none;
+
+   border-color: transparent;
+   color:white;
+   border-radius: 10px;
+
+   margin: 0 20px;
+
+   box-shadow: 0px 0px 8px 4px #00000069;
+   opacity:1;
+}
+
+#risultati-lista .Counter:hover, #risultati-lista .error:hover  {
+   opacity:1;
+}
+
+#risultati-lista .error {
+   color: black;
+   font-weight: 700;
+}
+
+#risultati-lista {
+   margin-top: 30px;
+}
+
+#risultati-lista li {
+   padding: 20px;
+   margin-top: 20px;
+
+   text-align: center;
+
+   list-style-type: circle;
+   list-style-position: inside;
+
+   border-top: 1px solid #00000069;
+   border-bottom: 1px solid #00000069;
+
+   cursor: pointer;
+   background-color: white;
+
+   transition: 0.5s ease;
+   opacity: 0.8;
+}
+
+#risultati-lista li:hover {
+   opacity: 1;
+   box-shadow: 0px 0px 8px 4px #00000069;
+}
+
+/*Evito commenti in CSS poichè non era compreso nel compito*/

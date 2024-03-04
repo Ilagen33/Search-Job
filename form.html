@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <!--Header-->
+    <header>
+
+        <!--Nav-bar-->
+        <nav>
+
+            <!--Logo-->
+            <h3>Epic Jobs</h3>
+
+            <!--Search-bar-->
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cerca nel sito...">
+            </div>
+
+            <!--Menu-->
+            <div class="menu">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+
+        <!--Tendina di account-->
+        <div class="tendina tendina-account">
+            <div class="settings">
+                <i class="fa-solid fa-gear"></i>
+                <p>Settings</p>
+            </div>
+            <div class="log-out">   
+                <i class="fa-solid fa-right-from-bracket"></i>                    
+                <p>Log-Out</p>
+            </div>
+
+        <!--Tendina delle tre barre-->
+        </div>
+        <div class="tendina tendina-menu">
+            <div class="dashboard">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </div>
+            <div class="msn">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Messages</p>
+            </div>
+        </div>
+
+        <!--Tendina dei piaciuti-->
+        <div class="tendina tendina-piaciuti">
+            <div class="salvati">
+                <i class="fa-solid fa-check"></i>
+                <p>Annunci Salvati</p>
+            </div>
+            <div class="piaciuti">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <p>Piaciuti</p>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <!--Titolo-->
+        <h1>Trova il lavoro giusto per te!</h1>
+
+        <!--Form-->
+        <form>
+            
+            <h2>Inserisci i dati per la tua ricerca:</h2>
+            <!--Inserimento testo per ricerca di una professione-->
+
+            <!--Tipo di professione-->
+            <label for="professione">Posizione:</label>
+            <input type="text" id="professione"  name="professione" placeholder="Professione ricercata" required>
+
+            <!--Luogo della professione-->
+            <label for="luogo">Luogo:</label>
+            <input type="text" id="luogo" name="luogo" placeholder="Luogo della professione">
+            
+            <!--Bottone di ricerca (una volta cliccato genera il risultato della ricerca)-->
+            <input type="button" id="ricerca" value="Cerca">
+
+        </form>
+        <ul id="risultati-lista"></ul>
+    </main>
+
+    <!--Footer-->
+    <footer>
+
+        <!--Nome azienda-->
+        <h3>Epic Jobs</h3>
+
+        <!--Contatti dell'azienda-->
+        <ul>
+            <h4>Contact us</h4>
+            <li> <span><i class="fa-solid fa-phone"></i></span> 1234567890</li>
+            <li> <span><i class="fa-solid fa-at"></i></span> epic-jobs@research.com</li>
+        </ul>
+
+        <!--Campo di testo per ricezione recensione-->
+        <div>
+            <label for="Opinioni">Lascia una recensione:</label>
+            <input type="text" name="Opinioni" id="Opinioni" placeholder="Cosa ne pensi?">
+        </div>
+    </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/ed97195370.js" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+</html>
